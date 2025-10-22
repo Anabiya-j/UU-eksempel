@@ -5,13 +5,14 @@
   Oppgaven for studentene er å identifisere og forbedre feilene.
   (Kun HTML + CSS – ingen JS.)
 -->
-<html>
+<html lang="nb">
   <!-- bevisst: mangler lang-attributt på <html> -->
   <head>
     <meta charset="utf-8">
     <!-- bevisst: blokkerer zoom (dårlig for UU) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Hjem</title> <!-- bevisst: vag tittel -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Forside for verdens beste nettside</title> <!-- bevisst: vag tittel -->
     <style>
       /* GENERELT DÅRLIG STILARK */
       /* bevisst: lav kontrast, små størrelser, ingen fokusmarkering */
@@ -100,12 +101,12 @@
     </style>
   </head>
   <body>
-    <div class="header">
+    <header>
       <span class="logo" aria-hidden="true"></span> <!-- bevisst: viktig info kun i bilde uten tekstalternativ -->
       <span class="site-title">Min side</span>
-    </div>
+    </header>
 
-    <div class="nav" role="navigation"> <!-- bevisst: upresist role og ingen semantisk <nav> -->
+    <nav class="nav" role="navigation"> <!-- bevisst: upresist role og ingen semantisk <nav> -->
       <a href="#">Hjem</a>
       <a href="#">Om oss</a>
       <div class="dropdown">
@@ -117,11 +118,12 @@
         </ul>
       </div>
       <a href="#">Kontakt</a>
-    </div>
+    </nav>
 
-    <div class="ticker">
-      <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
-    </div>
+    <section>
+        <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
+    </section>
+     
 
     <table class="layout" role="presentation"> <!-- bevisst: tabell for layout -->
       <tr>
